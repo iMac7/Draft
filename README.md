@@ -395,7 +395,7 @@ animate()
 ```
 <br>
 
-![Screenshot_20240403_160235](https://codesandbox.io/p/sandbox/staging-lake-lwpj3h)
+![Screenshot_20240403_160235](https://github.com/iMac7/Draft/assets/76876702/a5626c11-ab99-47b6-b1db-6c7cf9443b8c)
 
 <br>
 
