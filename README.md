@@ -379,13 +379,6 @@ function animate() {
 }
 animate()
 
-
-
-const button = document.querySelector('button')
-button.addEventListener('click', () => {
-    window.location.reload()
-})
-
 ```
 
 Visit [the sandbox I made this in](https://codesandbox.io/p/sandbox/magical-scott-rjk9n4zj7m) to see it live. 
