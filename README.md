@@ -45,6 +45,10 @@ script.js
 console.log('hello from script')
 ```
 Open index.html in a browser. If you have a black square on your screen and a log on your console, we are definitely on the same page, pun intended XD.
+
+![Screenshot_20240403_155443](https://github.com/iMac7/Draft/assets/76876702/948bf68d-29aa-4b21-b58a-adaec60be838)
+
+
 Adjust the width and height of the canvas according to your preferences and let's start drawing.
 <br>
 <br>
@@ -123,7 +127,9 @@ Draw the new image on the canvas.
 <br>
 <br>
 <br>
-//IMG: RESULTS ON BROWSER
+
+![Screenshot_20240403_155247](https://github.com/iMac7/Draft/assets/76876702/79e3a72d-ded6-447f-a643-7b72767458e8)
+
 
 Try playing with the code a bit, raise and lower alpha value in the image's pixel data, comment out or invert colors (255 - current_color) for different interesting results. 
 
@@ -132,13 +138,15 @@ We've seen how to apply colors on a still image, but how about animating it?
 
 ## Particle image effects
 
-Let's create another javascript file called particles.js. We'll see what that name means in a sec. We'll also learn a bit of OOP along the way.
+Let's create another javascript file called particles.js. We'll learn a bit of OOP along the way.
+Comment out the image.js script in `index.html` and comment in the particles.js import. This is what we will be making.
 
-//IMAGE: particles
+
+![Screenshot_20240403_155957](https://github.com/iMac7/Draft/assets/76876702/6ea0348c-4470-44cb-a6c1-8dfc8872dddb)
 
 Remember that an image is made up of pixels? Well, for this it's hard to use individual pixels for each particle of the image, that would be a very expensive operation. We'll take the performance hit on this demo and pixelate the image a bit, but it still looks cool :P
 
-Most of the code will just be defining the 2 classes in use - Particle and Animation. 
+Most of the code will just be defining the 2 classes in use - Particle and Animation. A class is just a way to reuse functionality by only defining one type of something. In this case, every particle of the image has a similar structure. 
 
 
 <br>
@@ -190,9 +198,12 @@ class Animation {
     }
 }
 ```
-The class `Animation` is an object that each particle (instance of class `Particle`) contains. 
+The class `Animation` is an object that each particle (instance of class `Particle`) contains.
+
 The `init()` function converts an image into an array of large particles.
-`draw()` assigns an animation object to each particle 
+
+`draw()` assigns an animation object to each particle.
+
 `update()` calls the update function in each particle. We haven't yet seen what that does.
 
 <br>
@@ -231,8 +242,10 @@ class Particle {
 }
 ```
 The class `Particle` is one of those tiny pieces of an image that you can see floating around. 
+
 `draw()` creates a rectangle shape for each particle on the canvas using its x, y starting position and various attributes you can change and have fun with.
-`update()` changes each particle's position towards its original position originX, originY.
+
+`update()` changes each particle's position towards its original position (originX, originY).
 
 
 <br>
@@ -347,8 +360,8 @@ class Particle {
     }
 
     update() {
-        this.x +=  (this.originX - this.x) * this.speed
-        this.y +=  (this.originY - this.y) * this.speed
+        this.x += (this.originX - this.x) * this.speed
+        this.y += (this.originY - this.y) * this.speed
     }
     
 }
@@ -380,7 +393,13 @@ function animate() {
 animate()
 
 ```
+<br>
 
-Visit [the sandbox I made this in](https://codesandbox.io/p/sandbox/magical-scott-rjk9n4zj7m) to see it live. 
+![Screenshot_20240403_160235](https://github.com/iMac7/Draft/assets/76876702/a5626c11-ab99-47b6-b1db-6c7cf9443b8c)
+
+<br>
+
+Visit [the sandbox I made this in](https://codesandbox.io/p/sandbox/magical-scott-rjk9n4zj7m) to see it live.
+
 Are you a _Frontend Master_ ? Share down below something impressive you made with canvas, I'd love to take a look.
 
