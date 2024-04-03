@@ -401,5 +401,4 @@ animate()
 
 Visit [the sandbox I made this in](https://codesandbox.io/p/sandbox/staging-lake-lwpj3h) to see it live.
 
-Are you a _Frontend Master_ ? Share down below something impressive you made with canvas, I'd love to take a look.
 
