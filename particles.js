@@ -6,17 +6,6 @@ class Animation {
         this.image = image
         this.pixelSize = 10
         this.context = context
-
-        this.mouse = {
-            radius: 500,
-            x: undefined,
-            y: undefined,
-        }
-
-        window.addEventListener('mousemove', (event) => {
-            this.mouse.x = event.x
-            this.mouse.y = event.y
-        })
     }
     init() {
         this.image.onload = ()=> {
@@ -102,7 +91,7 @@ animation.draw()
 
 function animate() {
     // comment this line back in to clear out the extra particles
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    // ctx.clearRect(0, 0, canvas.width, canvas.height)
     animation.draw()
     animation.update()
     requestAnimationFrame(animate)
